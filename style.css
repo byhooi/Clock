@@ -1,11 +1,15 @@
 html {
     background-color: #000;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    height: 100vh;
+    min-height: 100vh;
+    height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,16 +18,18 @@ body {
     -webkit-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
+    overflow: hidden;
 }
 
 .clock-container {
     text-align: center;
-    padding: 40px;
+    padding: 60px 40px;
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    height: 100%;
 }
 
 .date {
@@ -72,21 +78,24 @@ body {
 
 @media (orientation: landscape) {
     .clock-container {
-        padding: 30px;
-        gap: 1rem;
+        padding: 80px 40px;
+        gap: 2rem;
     }
     .time { 
         font-size: 15rem;
-        margin: 1rem 0;
+        margin: 2rem 0;
     }
     .date { 
         font-size: 4.2rem;
+        margin-top: 1rem;
     }
     .weather { 
         font-size: 3.5rem;
+        margin: 1rem 0;
     }
     .hitokoto {
         font-size: 2rem;
+        margin-top: 1rem;
     }
 }
 
