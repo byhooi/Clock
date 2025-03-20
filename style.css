@@ -20,13 +20,6 @@ body {
     width: 100%;
 }
 
-.time {
-    font-size: 15rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    line-height: 1;
-}
-
 .date {
     font-size: 4.5rem;
     margin-bottom: 2rem;
@@ -35,7 +28,25 @@ body {
 
 .weather {
     font-size: 4rem;
+    margin-bottom: 2rem;
     opacity: 0.8;
+}
+
+.time {
+    font-size: 15rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.hitokoto {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.hitokoto a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #temperature {

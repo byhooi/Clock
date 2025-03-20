@@ -41,8 +41,27 @@ setInterval(updateTime, 1000);
 // 立即更新时间
 updateTime();
 
+async function fetchHitokoto() {
+    try {
+        const response = await fetch('https://v1.hitokoto.cn');
+        const { uuid, hitokoto: hitokotoText } = await response.json();
+        const hitokoto = document.querySelector('#hitokoto_text');
+        hitokoto.href = `https://hitokoto.cn/?uuid=${uuid}`;
+        hitokoto.innerText = hitokotoText;
+    } catch (error) {
+        console.error('获取一言失败:', error);
+        document.querySelector('#hitokoto_text').innerText = '获取一言失败';
+    }
+}
+
 // 每30分钟更新一次天气
 setInterval(updateWeather, 30 * 60 * 1000);
 
 // 立即更新天气
 updateWeather();
+
+// 每10分钟更新一次一言
+setInterval(fetchHitokoto, 10 * 60 * 1000);
+
+// 立即更新一言
+fetchHitokoto();
