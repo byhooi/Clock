@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     height: 100vh;
+    padding-top: env(safe-area-inset-top);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,22 +20,33 @@ body {
     width: 100%;
 }
 
-.time {
-    font-size: 12rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    line-height: 1;
-}
-
 .date {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
 
 .weather {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.time {
+    font-size: 15rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.hitokoto {
     font-size: 3rem;
     opacity: 0.8;
+}
+
+.hitokoto a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #temperature {
@@ -42,7 +54,7 @@ body {
 }
 
 @media (orientation: landscape) {
-    .time { font-size: 10rem; }
-    .date { font-size: 3rem; }
-    .weather { font-size: 2.5rem; }
+    .time { font-size: 13rem; }
+    .date { font-size: 4rem; }
+    .weather { font-size: 3.5rem; }
 }
