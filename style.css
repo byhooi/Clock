@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     height: 100vh;
+    padding-top: env(safe-area-inset-top);
     display: flex;
     justify-content: center;
     align-items: center;
