@@ -21,20 +21,20 @@ body {
 }
 
 .time {
-    font-size: 12rem;
+    font-size: 15rem;
     font-weight: bold;
     margin-bottom: 2rem;
     line-height: 1;
 }
 
 .date {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
 
 .weather {
-    font-size: 3rem;
+    font-size: 4rem;
     opacity: 0.8;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 @media (orientation: landscape) {
-    .time { font-size: 10rem; }
-    .date { font-size: 3rem; }
-    .weather { font-size: 2.5rem; }
+    .time { font-size: 13rem; }
+    .date { font-size: 4rem; }
+    .weather { font-size: 3.5rem; }
 }
