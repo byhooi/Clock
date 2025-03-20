@@ -43,11 +43,9 @@ updateTime();
 
 async function fetchHitokoto() {
     try {
-        const response = await fetch('https://v1.hitokoto.cn');
-        const { uuid, hitokoto: hitokotoText } = await response.json();
-        const hitokoto = document.querySelector('#hitokoto_text');
-        hitokoto.href = `https://hitokoto.cn/?uuid=${uuid}`;
-        hitokoto.innerText = hitokotoText;
+        const response = await fetch('https://v1.hitokoto.cn/?c=f&encode=text');
+        const hitokotoText = await response.text();
+        document.querySelector('#hitokoto_text').innerText = hitokotoText;
     } catch (error) {
         console.error('获取一言失败:', error);
         document.querySelector('#hitokoto_text').innerText = '获取一言失败';
