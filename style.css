@@ -19,51 +19,39 @@ body {
     padding: 40px;
     width: 100%;
     max-width: 1200px;
-    display: grid;
-    grid-template-areas:
-        "date weather"
-        "time time"
-        "hitokoto hitokoto";
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
 }
 
 .date {
-    grid-area: date;
     font-size: 4.5rem;
     font-weight: 300;
     letter-spacing: -0.02em;
     opacity: 0.95;
-    justify-self: start;
 }
 
 .weather {
-    grid-area: weather;
     font-size: 3.8rem;
     font-weight: 300;
     letter-spacing: -0.01em;
     opacity: 0.9;
-    justify-self: end;
 }
 
 .time {
-    grid-area: time;
     font-size: 18rem;
     font-weight: 700;
     line-height: 0.9;
     letter-spacing: -0.03em;
-    justify-self: center;
 }
 
 .hitokoto {
-    grid-area: hitokoto;
     font-size: 2.2rem;
     font-weight: 300;
     opacity: 0.85;
     line-height: 1.4;
     max-width: 800px;
     margin: 0 auto;
-    justify-self: center;
 }
 
 .hitokoto a {
@@ -84,9 +72,6 @@ body {
     .clock-container {
         padding: 30px;
         gap: 1rem;
-        grid-template-areas:
-            "date time weather"
-            "hitokoto hitokoto hitokoto";
     }
     .time { 
         font-size: 15rem;
