@@ -43,7 +43,7 @@ updateTime();
 
 async function fetchHitokoto() {
     try {
-        const response = await fetch('https://v1.hitokoto.cn/?c=f&encode=text');
+        const response = await fetch('https://v1.hitokoto.cn');
         const { uuid, hitokoto: hitokotoText } = await response.json();
         const hitokoto = document.querySelector('#hitokoto_text');
         hitokoto.href = `https://hitokoto.cn/?uuid=${uuid}`;
