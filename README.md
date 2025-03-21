@@ -18,7 +18,7 @@
 
 ## 特别感谢
 
-特别感谢 [Trae](https://github.com/Trae) 的支持和贡献。
+特别感谢 [Trae](https://github.com/Trae) 的贡献。
 ## 开源协议
 
 本项目采用 MIT 协议开源。
